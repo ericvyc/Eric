@@ -1,4 +1,4 @@
-package curso.javaee.primefaces;
+package curso.javaee.primefaces.cadastroaluno;
 
 import java.io.Serializable;
 
