@@ -33,6 +33,7 @@ public class InversaoNomeBean implements Serializable {
 			}
 		}
 		System.out.println("Nome invertido: "+ getNomeInvertido());
+		System.out.println("Quantidade de palavras: " + getQuantidadePalavras());
 	}
 
 	public String getNome() {

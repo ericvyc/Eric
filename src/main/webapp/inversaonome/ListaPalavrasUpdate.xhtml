@@ -19,18 +19,18 @@
 			<p:outputLabel value="Nome: " for="nome" />
 			<p:inputText id="nome" value="#{inversaoNomeBean.nome}">
 				<p:ajax listener="#{inversaoNomeBean.inverter}"
-					update=":frm2:nomeInvertido" event="keyup" />
+					update="nomeInvertido, quantidadePalavras" event="keyup" />
 			</p:inputText>
 
 		</p:panelGrid>
 
-
-	</h:form>
-
-	<h:form id="frm2">
-
 		<h:outputText value="#{inversaoNomeBean.nomeInvertido}"
 			id="nomeInvertido" />
+			
+		<br />
+
+		<h:outputText value="#{inversaoNomeBean.quantidadePalavras}"
+			id="quantidadePalavras" />
 
 	</h:form>
 
