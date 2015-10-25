@@ -15,6 +15,26 @@
 
 		<p:messages />
 
+		<p:panelGrid columns="2">
+
+			<f:facet name="header">Inversão de Nome</f:facet>
+
+			<p:outputLabel value="Nome: " for="nome" />
+			<p:inputText id="nome" required="true" value="#{inversaoNomeBean.nome}" />
+			
+			<p:outputLabel value="Nome Invertido: " for="nomeInvertido"/>
+			<h:outputText id="nomeInvertido" value="#{inversaoNomeBean.nomeInvertido}" />
+
+			<f:facet name="footer">
+				<p:commandButton value="Inverter" 
+				icon="ui-icon-check" 
+				iconPos="left"
+				action="#{inversaoNomeBean.inverter}" 
+				update="nomeInvertido"/>
+			</f:facet>
+
+		</p:panelGrid>
+
 	</h:form>
 
 </h:body>

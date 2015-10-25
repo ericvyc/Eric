@@ -22,6 +22,9 @@
 			
 			<p:outputLabel value="E-mail: " for="email"/>
 			<p:inputText id="email" required="true" value="#{cadastroAlunoBean.email}"/>
+			
+			<p:outputLabel value="Calendário" for="calendario"/>
+			<p:calendar id="calendario" required="true"/>
 
 			<f:facet name="footer">
 			<p:commandButton value="Cadastrar" ajax="false"

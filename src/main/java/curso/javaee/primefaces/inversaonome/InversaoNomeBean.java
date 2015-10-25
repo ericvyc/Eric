@@ -10,15 +10,29 @@ import javax.faces.bean.ViewScoped;
 public class InversaoNomeBean implements Serializable {
 
 	private static final long serialVersionUID = -7603144849897603733L;
-	
+
 	private String nome;
-	
-	private String nomeInertido;
-	
+
+	private String nomeInvertido;
+
 	private int quantidadePalavras;
-	
-	public void inverter(){
-		
+
+	public void inverter() {
+		setNomeInvertido("");
+		setQuantidadePalavras(0);
+
+		if(getNome() != null && !getNome().isEmpty()){
+			setQuantidadePalavras(1);
+		}
+		for(int i = getNome().length() -1; i >= 0; i--){
+			char letra = getNome().charAt(i);
+			this.nomeInvertido += letra;
+
+			if(letra == ' '){
+				setQuantidadePalavras(getQuantidadePalavras()+1);
+			}
+		}
+		System.out.println("Nome invertido: "+ getNomeInvertido());
 	}
 
 	public String getNome() {
@@ -29,12 +43,12 @@ public class InversaoNomeBean implements Serializable {
 		this.nome = nome;
 	}
 
-	public String getNomeInertido() {
-		return nomeInertido;
+	public String getNomeInvertido() {
+		return nomeInvertido;
 	}
 
-	public void setNomeInertido(String nomeInertido) {
-		this.nomeInertido = nomeInertido;
+	public void setNomeInvertido(String nomeInvertido) {
+		this.nomeInvertido = nomeInvertido;
 	}
 
 	public int getQuantidadePalavras() {
